@@ -1,0 +1,14 @@
+{
+  "name": "hastanirmita",
+  "version": "1.0.0",
+  "description": "home page for hastanirmita website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Soumyadeep Dhar",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
