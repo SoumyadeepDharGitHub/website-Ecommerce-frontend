@@ -1,3 +1,34 @@
+/* Effects and Animations Code*/
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  70% {
+    transform: translateY(1.4rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveup {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  70% {
+    transform: translateY(-1.4rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes movefromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1.4rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0.17rem); } }
+
 /* Performing Basic Reset*/
 *,
 *::after,
@@ -12,35 +43,15 @@ html {
   /* Allows user to zoom into page or change font size */ }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: white;
   padding: 3rem;
-  background-color: whitesmoke;
-  box-sizing: border-box; }
-
-/* Class Selectors*/
-.header {
-  height: 95vh;
-  /*height of element will be 95% of the viewport height*/
-  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Assets/Images/Handcraft-clay-background.jpg);
-  /*adding the bacground image for home page top position+setting gradient for overlapping image (left top to botton right)+setting gradient colours and changing oppacity to 80% of original color(i.e 0.8 at the end of th rgb value) */
-  background-size: cover;
-  /* fits the image element as per the viewport of the screen */
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 700px, 0 100%); }
-  .header__logoBox {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 17rem;
-    opacity: 100%;
-    animation-name: movefromleft;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out; }
+  background-color: whitesmoke; }
 
 .heading {
   position: absolute;
@@ -118,33 +129,23 @@ body {
   .button--white::after {
     background-color: white; }
 
-/* Effects and Animations Code*/
-@keyframes movedown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10rem); }
-  70% {
-    transform: translateY(1.4rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes moveup {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); }
-  70% {
-    transform: translateY(-1.4rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes movefromleft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1.4rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0.17rem); } }
+.header {
+  height: 95vh;
+  /*height of element will be 95% of the viewport height*/
+  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Assets/Images/Handcraft-clay-background.jpg);
+  /*adding the bacground image for home page top position+setting gradient for overlapping image (left top to botton right)+setting gradient colours and changing oppacity to 80% of original color(i.e 0.8 at the end of th rgb value) */
+  background-size: cover;
+  /* fits the image element as per the viewport of the screen */
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 700px, 0 100%); }
+  .header__logoBox {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 17rem;
+    opacity: 100%;
+    animation-name: movefromleft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out; }

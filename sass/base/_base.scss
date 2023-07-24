@@ -1,0 +1,20 @@
+/* Performing Basic Reset*/
+*,/*all elements*/
+*::after,/*all after pseudo elements*/
+*::before/*all before pseudo elements*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    font-size: 62.5%;/* Setting root font size to 62.5 percent of default browser font size (usually 16px) making default font size to 10px i.e 62.5% of 16px*/
+                    /* Allows user to zoom into page or change font size */
+}
+
+body
+{
+    box-sizing: border-box;
+}

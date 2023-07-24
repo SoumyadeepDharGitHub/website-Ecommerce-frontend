@@ -1,0 +1,61 @@
+/* Effects and Animations Code*/
+
+@keyframes movedown
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    70%
+    {
+        transform: translateY(1.4rem);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveup
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    70%
+    {
+        transform: translateY(-1.4rem);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes movefromleft
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%
+    {
+        transform: translateX(1.4rem);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0.17rem);
+    }
+}
