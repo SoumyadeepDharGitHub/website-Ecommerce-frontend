@@ -136,6 +136,12 @@ body
     {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after
+        {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
     }
 
     &:active /*Setting active i.e on clicking state animation Properties for all buttons in the website */
@@ -162,21 +168,14 @@ body
     {
         background-color: $color-white;
         color: $color-dark-grey;
+
+        &::after
+        {
+            background-color: $color-white;  
+        }
+    }
+
     
-    }
-
-
-
-    &--white::after
-    {
-        background-color: $color-white;  
-    }
-
-    &:hover::after
-    {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
 }
 
 

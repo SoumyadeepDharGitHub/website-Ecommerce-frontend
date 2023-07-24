@@ -91,6 +91,9 @@ body {
 .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .button:active {
   transform: translateY(-1px);
@@ -112,13 +115,8 @@ body {
 .button--white {
   background-color: white;
   color: #777777; }
-
-.button--white::after {
-  background-color: white; }
-
-.button:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  .button--white::after {
+    background-color: white; }
 
 /* Effects and Animations Code*/
 @keyframes movedown {
