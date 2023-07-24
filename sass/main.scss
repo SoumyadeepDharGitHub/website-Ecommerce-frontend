@@ -4,6 +4,7 @@ $color-blue-gradient:rgb(19,212,235);
 $color-dark-grey:rgb(119, 119, 119);
 $color-white:rgb(255, 255, 255);
 $color-black:rgb(0, 0, 0);
+$color-white-smoke:rgb(245, 245, 245);
 /* Performing Basic Reset*/
 *,/*all elements*/
 *::after,/*all after pseudo elements*/
@@ -26,9 +27,9 @@ body
     font-weight: 400;
     
     line-height: 1.7;
-    color: $color-dark-grey;
+    color: $color-white;
     padding: 3rem;
-    background-color:#F5F5F5;
+    background-color:$color-white-smoke;
     box-sizing: border-box;
     
 }
@@ -47,135 +48,138 @@ body
 
     clip-path: polygon(0 0, 100% 0, 100% 700px, 0 100%);
 
+    &__logoBox
+        {
+            position: absolute;
+            top: 4rem;
+            left: 4rem; 
+        }
+    &__logo
+        {
+            height: 17rem;
+            opacity: 100%;
+            animation-name: movefromleft;
+            animation-duration: 0.7s;
+            animation-timing-function: ease-out;  
+        }
 }
 
-.header__logoBox
-{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
 
-.header__logo
-{
-    height: 17rem;
-    opacity: 100%;
-    animation-name: movefromleft;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out;
-}
-
-.heading-prime
-{
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
-
-.heading-first--main
-{
-    display: block;
-    font-size: 5.6rem;
-    font-weight: 700;
-    letter-spacing: 3.07rem;
-
-    animation-name: movedown;
-    animation-duration: 1s;
-}
-
-.heading-second--sub
-{
-    display: block;
-    font-size: 2.1rem;
-    font-weight:40rem;
-    letter-spacing: 1.47rem;
-    text-align: center;
-
-    animation-name: moveup;
-    animation-duration: 1s;
-
-}
-
-.header__center-box 
+.heading 
 {
     position: absolute;
     top: 40.7%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
-}
-/* Button Design and assigned effects and animations */
-.button:link, /* button before and after clicking on it are same */
-.button:visited
-{
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all 0.3s;
-    position: relative;
-    font-size: 1.6rem;
 
-}
+    &__prime
+    {
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 6rem;
+    }
 
-.button-animated
-{
-    animation-name: moveup;
-    animation-duration: 0.7s;
-    transition-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-   
-}
+    &__first-main
+    {
+        display: block;
+        font-size: 5.6rem;
+        font-weight: 700;
+        letter-spacing: 3.07rem;
 
-.button:hover /* Effects when cursor is on the button */
-{
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.button:active /*Setting active i.e on clicking state animation Properties for all buttons in the website */
-{
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem/*offset in X-axis,offset in Y-axis,blur value*/ rgba(0, 0, 0, 0.2);/*color and opacity*/
-}
-
-.button::after
-{
-    content:"";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
-}
-
-.button--white /* Setting Home Page Product Button background color and font color */
-{
-    background-color: $color-white;
-    color: $color-dark-grey;
+        animation-name: movedown;
+        animation-duration: 1s;
+    }
     
+    &__second-sub
+    {
+        display: block;
+        font-size: 2.1rem;
+        font-weight:40rem;
+        letter-spacing: 1.47rem;
+        text-align: center;
+        margin-bottom: 60px;
+        animation-name: moveup;
+        animation-duration: 1s;
+    }
 }
 
-
-
-.button--white::after
+.button
 {
-    background-color: $color-white;  
+    &:link, /* Button Design and assigned effects and animations */
+    &:visited/* button before and after clicking on it are same */
+    {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.3s;
+        position: relative;
+        font-size: 1.6rem;
+
+    }
+
+    &-animated
+    {
+        animation-name: moveup;
+        animation-duration: 0.7s;
+        transition-timing-function: ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: backwards;
+   
+    }
+
+    &:hover /* Effects when cursor is on the button */
+    {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active /*Setting active i.e on clicking state animation Properties for all buttons in the website */
+    {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem/*offset in X-axis,offset in Y-axis,blur value*/ rgba(0, 0, 0, 0.2);/*color and opacity*/
+    }
+
+    &::after
+    {
+        content:"";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+
+    &--white /* Setting Home Page Product Button background color and font color */
+    {
+        background-color: $color-white;
+        color: $color-dark-grey;
+    
+    }
+
+
+
+    &--white::after
+    {
+        background-color: $color-white;  
+    }
+
+    &:hover::after
+    {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
 }
 
-.button:hover::after
-{
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+
 
 /* Effects and Animations Code*/
 
