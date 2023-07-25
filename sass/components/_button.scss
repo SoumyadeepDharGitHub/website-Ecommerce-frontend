@@ -69,3 +69,32 @@
 
     
 }
+
+.button-learnmore
+{
+    &:link,
+    &:visited
+    {
+        font-size: 1.8rem;
+        color: $color-deep-blue-gradient-1;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px $color-deep-blue-gradient-1;
+        padding: 3px;
+        transition: all 0.2s;
+    }
+
+    &:hover
+    {
+        background-color: $color-deep-blue-gradient-1;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .7);
+        transform: translateY(-5px);
+    }
+
+    &:active
+    {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .7);
+        transform: translateY(0px);
+    }
+}

@@ -82,6 +82,45 @@ body {
     animation-name: moveup;
     animation-duration: 1s; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: 'Bungee', cursive;
+  font-weight: 400;
+  display: inline-block;
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #00bf72, #a8eb12);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.5rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(-7deg) skewX(-14deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.2); }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777777;
+  text-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.2); }
+
+.para {
+  color: #777777;
+  text-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.2);
+  font-size: 1.7rem; }
+  .para:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.utility-text-center {
+  text-align: center; }
+
+.utility-bottom-margin-8rem {
+  margin-bottom: 8rem; }
+
+.utility-bottom-margin-2rem {
+  margin-bottom: 2rem; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -129,6 +168,67 @@ body {
   .button--white::after {
     background-color: white; }
 
+.button-learnmore:link, .button-learnmore:visited {
+  font-size: 1.8rem;
+  color: #004d7a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px #004d7a;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.button-learnmore:hover {
+  background-color: #004d7a;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px); }
+
+.button-learnmore:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  transform: translateY(0px); }
+
+.comp {
+  position: relative; }
+  .comp_picture {
+    width: 70%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    position: absolute;
+    z-index: 7;
+    transition: 0.2s;
+    outline-offset: 21px; }
+    .comp_picture--first {
+      left: 0;
+      top: -2rem; }
+    .comp_picture--second {
+      right: -7rem;
+      top: 5rem; }
+    .comp_picture--third {
+      left: 20%;
+      top: 20rem; }
+    .comp_picture:hover {
+      outline: 1.5rem solid #008793;
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.7);
+      z-index: 14; }
+  .comp:hover .comp_picture:not(:hover) {
+    transform: scale(0.9); }
+
+.rows {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .rows:not(:last-child) {
+    margin-bottom: 8rem; }
+  .rows::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .rows .col-1-of-2 {
+    width: calc((100% - 6rem)/2);
+    float: left; }
+    .rows .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+
 .header {
   height: 95vh;
   /*height of element will be 95% of the viewport height*/
@@ -138,7 +238,7 @@ body {
   /* fits the image element as per the viewport of the screen */
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 700px, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logoBox {
     position: absolute;
     top: 4rem;
@@ -149,3 +249,8 @@ body {
     animation-name: movefromleft;
     animation-duration: 0.7s;
     animation-timing-function: ease-out; }
+
+.about-us {
+  background-color: #dde6ed;
+  padding: 25rem 0;
+  margin-top: -20vh; }

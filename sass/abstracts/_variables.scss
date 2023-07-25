@@ -1,7 +1,24 @@
-//sass color variables declaration
+//sass color gradient variables
 $color-yellow-gradient:rgb(236,237,100);
 $color-blue-gradient:rgb(19,212,235);
+$color-orange-gradient:rgb(246, 150, 39);
+$color-green-gradient:rgb(0, 191, 114);
+$color-green-yellow-gradient:rgb(168, 235, 18);
+$color-black-blue-deep-gradient:rgb(5, 25, 55);
+$color-deep-blue-gradient-1:rgb(0, 77, 122);
+$color-blue-gradient-1:rgb(0, 135, 147);
+
+//sass general color variables
 $color-dark-grey:rgb(119, 119, 119);
 $color-white:rgb(255, 255, 255);
 $color-black:rgb(0, 0, 0);
+
+//sass white-and-grey variables
 $color-white-smoke:rgb(245, 245, 245);
+$color-light-blue-grey:rgb(221, 230, 237);
+$color-deep-blue-1:rgb(157, 178, 191);
+
+//grid variables
+$grid-width:114rem;//since its commom to use 1140px while using to create the max-width of a grid in current sass methods.
+$vertical-gutter:8rem;
+$horizontal-gutter:6rem;//for spacing between columns

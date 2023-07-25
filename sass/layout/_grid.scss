@@ -1,0 +1,26 @@
+.rows
+{
+    max-width: $grid-width;
+
+    margin:0 auto;
+
+
+    &:not(:last-child)//not pseudo class encapsulating the last-child pseudo class.
+    {//basically selects all the elemets except the last child 
+        margin-bottom: $vertical-gutter;
+    }
+
+    @include clearfix;
+
+    .col-1-of-2//for two colums in a row of equal size
+    {
+        width: calc((100% - #{$horizontal-gutter})/2);//using calc() to calculate the 
+
+        float: left;
+
+            &:not(:last-child)
+            {
+                margin-right: $horizontal-gutter;
+            }
+    }
+}

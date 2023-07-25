@@ -1,0 +1,46 @@
+.comp
+{
+    position: relative;
+    &_picture
+    {
+        width: 70%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 14px;
+        position: absolute;
+        z-index: 7;
+        transition: 0.2s;
+        outline-offset: 21px;
+        
+
+        &--first
+        {
+            left: 0;
+            top: -2rem;
+        }
+
+        &--second
+        {
+            right: -7rem;
+            top: 5rem;
+        }
+
+        &--third
+        {
+            left: 20%;
+            top: 20rem;
+        }
+
+        &:hover
+        {
+            outline: 1.5rem solid $color-blue-gradient-1;
+            transform: scale(1.05);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .7);
+            z-index: 14;
+        }
+    }
+    &:hover &_picture:not(:hover)
+        {
+            transform: scale(0.9);
+        }
+    
+}
