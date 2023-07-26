@@ -33,7 +33,7 @@
         &:hover
         {
             outline: 1.5rem solid $color-blue-gradient-1;
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-0.4rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .7);
             z-index: 14;
         }

@@ -45,6 +45,9 @@ html {
 body {
   box-sizing: border-box; }
 
+p {
+  color: #777777; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -208,11 +211,34 @@ body {
       top: 20rem; }
     .comp_picture:hover {
       outline: 1.5rem solid #008793;
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-0.4rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.7);
       z-index: 14; }
   .comp:hover .comp_picture:not(:hover) {
     transform: scale(0.9); }
+
+.feature-box {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.5);
+  display: inline-block;
+  width: 35rem;
+  max-width: 114rem;
+  margin-left: 8rem;
+  margin-top: 7rem;
+  transition: all 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right bottom, #051937, #004d7a, #00bf72, #a8eb12);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(1.5rem) scale(1.05); }
 
 .rows {
   max-width: 114rem;
@@ -228,6 +254,9 @@ body {
     float: left; }
     .rows .col-1-of-2:not(:last-child) {
       margin-right: 6rem; }
+
+.col-1-of-4 {
+  display: inline-block; }
 
 .header {
   height: 95vh;
@@ -254,3 +283,11 @@ body {
   background-color: #dde6ed;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section_feature {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Images/backgroundimage2-crop.jpg);
+  background-size: cover;
+  height: 90vh;
+  clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
+  margin-top: -15vh; }
