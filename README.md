@@ -6,5 +6,3 @@ Frontend project creating an E-Commerce page using HTML and CSS. Site name "Hast
 **This Project cannot be copied and added in your CV or any other form to make it look like your project**
 
 **Hope You Like My Project**
-
-Commit Test
