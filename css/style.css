@@ -232,7 +232,7 @@ body {
 .header {
   height: 95vh;
   /*height of element will be 95% of the viewport height*/
-  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Assets/Images/Handcraft-clay-background.jpg);
+  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Images/Handcraft-clay-background.jpg);
   /*adding the bacground image for home page top position+setting gradient for overlapping image (left top to botton right)+setting gradient colours and changing oppacity to 80% of original color(i.e 0.8 at the end of th rgb value) */
   background-size: cover;
   /* fits the image element as per the viewport of the screen */
