@@ -24,8 +24,12 @@ $color-deep-blue-1:rgb(157, 178, 191);
 $color-orange-c-1:rgb(228, 96, 40);
 $color-purple-c-1:rgb(210, 106, 247);
 
-$color-blue-c-2:#69dfe0;
-$color-red-c-2:#db3a3a;
+$color-yellow-c-2:#dbd73a;
+$color-red-c-2:rgb(230, 41, 108);
+
+$color-yellow-c-3:#dfe649;
+$color-blue-c-3:#004fa1;
+
 
 //grid variables
 $grid-width:114rem;//since its commom to use 1140px while using to create the max-width of a grid in current sass methods.

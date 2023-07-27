@@ -12,9 +12,9 @@
         
         height: 50rem;
         transition: all 0.5s ease;
-        color: white;
         font-size: 5rem;
         border-radius: 1rem;
+        overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
@@ -29,12 +29,22 @@
         
         &--back
         {
-            background-color: green;
+           
             transform: rotateY(180deg);
 
             &-1
             {
                 background-image: linear-gradient(to right bottom, $color-orange-c-1, $color-purple-c-1);
+            }
+
+            &-2
+            {
+                background-image: linear-gradient(to right bottom, $color-yellow-c-3, $color-blue-c-3);
+            }
+
+            &-3
+            {
+                background-image: linear-gradient(to right bottom, $color-yellow-c-2, $color-red-c-2);
             }
             
         }
@@ -55,6 +65,9 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: soft-light;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
 
         &--1
         {
@@ -64,12 +77,26 @@
 
         &--2
         {
-            background-image: url(../Images/card-2-crop.jpg);
+            background-image: linear-gradient(to right bottom, $color-yellow-c-3, $color-blue-c-3),
+            url(../Images/card-2-crop.jpg);
         }
 
         &--3
         {
-            background-image: url(../Images/card-3-crop.jpg);
+            background-image: linear-gradient(to right bottom, $color-yellow-c-2, $color-red-c-2),
+            url(../Images/card-3-crop.jpg);
         }
+    }
+
+    &__heading
+    {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 16rem;
+        right: 2rem;
+        text-align: right;
     }
 }

@@ -10,7 +10,7 @@
     background-size: cover;/* fits the image element as per the viewport of the screen */
     background-position: top;
     position: relative;
-
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logoBox

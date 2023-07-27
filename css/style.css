@@ -198,9 +198,9 @@ body {
   .card__side {
     height: 50rem;
     transition: all 0.5s ease;
-    color: white;
     font-size: 5rem;
     border-radius: 1rem;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -210,10 +210,13 @@ body {
     .card__side--front {
       background-color: white; }
     .card__side--back {
-      background-color: green;
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #e46028, #d26af7); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #dfe649, #004fa1); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #dbd73a, #e6296c); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -221,13 +224,24 @@ body {
   .card__picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: soft-light; }
+    background-blend-mode: soft-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #e46028, #d26af7), url(../Images/card-1-crop.jpg); }
     .card__picture--2 {
-      background-image: url(../Images/card-2-crop.jpg); }
+      background-image: linear-gradient(to right bottom, #dfe649, #004fa1), url(../Images/card-2-crop.jpg); }
     .card__picture--3 {
-      background-image: url(../Images/card-3-crop.jpg); }
+      background-image: linear-gradient(to right bottom, #dbd73a, #e6296c), url(../Images/card-3-crop.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 16rem;
+    right: 2rem;
+    text-align: right; }
 
 .comp {
   position: relative; }
@@ -309,6 +323,7 @@ body {
   /* fits the image element as per the viewport of the screen */
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logoBox {
     position: absolute;
