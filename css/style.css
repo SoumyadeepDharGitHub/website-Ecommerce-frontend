@@ -210,7 +210,7 @@ body {
       left: 20%;
       top: 20rem; }
     .comp_picture:hover {
-      outline: 1.5rem solid #008793;
+      outline: 1.5rem solid #e1ffb1;
       transform: scale(1.05) translateY(-0.4rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.7);
       z-index: 14; }
@@ -224,13 +224,8 @@ body {
   padding: 2.5rem;
   text-align: center;
   border-radius: 14px;
-  box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.5);
-  display: inline-block;
-  width: 35rem;
-  max-width: 114rem;
-  margin-left: 8rem;
-  margin-top: 7rem;
-  transition: all 0.3s; }
+  box-shadow: 0 1.5rem 4rem #777777;
+  transition: all 0.5s; }
   .feature-box__icon {
     font-size: 6rem;
     background-image: linear-gradient(to right bottom, #051937, #004d7a, #00bf72, #a8eb12);
@@ -240,28 +235,36 @@ body {
   .feature-box:hover {
     transform: translateY(1.5rem) scale(1.05); }
 
-.rows {
+.row {
   max-width: 114rem;
   margin: 0 auto; }
-  .rows:not(:last-child) {
+  .row:not(:last-child) {
     margin-bottom: 8rem; }
-  .rows::after {
+  .row::after {
     content: "";
     display: table;
     clear: both; }
-  .rows .col-1-of-2 {
-    width: calc((100% - 6rem)/2);
+  .row [class^="col-"] {
     float: left; }
-    .rows .col-1-of-2:not(:last-child) {
+    .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-
-.col-1-of-4 {
-  display: inline-block; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
   height: 95vh;
   /*height of element will be 95% of the viewport height*/
-  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Images/Handcraft-clay-background.jpg);
+  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.5), rgba(19, 212, 235, 0.5)), url(../Images/Handcraft-clay-background.jpg);
   /*adding the bacground image for home page top position+setting gradient for overlapping image (left top to botton right)+setting gradient colours and changing oppacity to 80% of original color(i.e 0.8 at the end of th rgb value) */
   background-size: cover;
   /* fits the image element as per the viewport of the screen */
@@ -286,7 +289,7 @@ body {
 
 .section_feature {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.7), rgba(19, 212, 235, 0.7)), url(../Images/backgroundimage2-crop.jpg);
+  background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.8), rgba(19, 212, 235, 0.8)), url(../Images/backgroundimage2-crop.jpg);
   background-size: cover;
   height: 90vh;
   clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
