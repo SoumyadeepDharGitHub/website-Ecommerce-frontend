@@ -225,7 +225,7 @@ body {
   text-align: center;
   border-radius: 14px;
   box-shadow: 0 1.5rem 4rem #777777;
-  transition: all 0.5s; }
+  transition: all 0.2s; }
   .feature-box__icon {
     font-size: 6rem;
     background-image: linear-gradient(to right bottom, #051937, #004d7a, #00bf72, #a8eb12);
