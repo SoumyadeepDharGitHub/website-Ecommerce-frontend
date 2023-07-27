@@ -294,3 +294,8 @@ body {
   height: 90vh;
   clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
   margin-top: -15vh; }
+
+.section-item {
+  background-color: #dde6ed;
+  padding: 25rem 0;
+  margin-top: -15vh; }
