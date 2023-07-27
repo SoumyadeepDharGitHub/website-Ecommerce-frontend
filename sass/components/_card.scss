@@ -65,8 +65,8 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: soft-light;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
 
         &--1
@@ -98,5 +98,25 @@
         top: 16rem;
         right: 2rem;
         text-align: right;
+       
+    }
+
+    &__heading-span
+    {
+        padding: 1rem 1.5rem;
+        &--1
+        {
+            background-image: linear-gradient(to right bottom, rgba($color-orange-c-1, 0.9), rgba($color-purple-c-1, 0.9));
+        }
+
+        &--2
+        {
+            background-image: linear-gradient(to right bottom, rgba($color-yellow-c-3, 0.9), rgba($color-blue-c-3, 0.9));
+        }
+
+        &--3
+        {
+            background-image: linear-gradient(to right bottom, rgba($color-yellow-c-2, 0.9), rgba($color-red-c-2, 0.9));
+        }
     }
 }
