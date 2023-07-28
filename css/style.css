@@ -196,7 +196,7 @@ body {
   position: relative;
   height: 50rem; }
   .card__side {
-    height: 50rem;
+    height: 55rem;
     transition: all 0.5s ease;
     font-size: 5rem;
     border-radius: 1rem;
@@ -243,13 +243,42 @@ body {
     right: 2rem;
     text-align: right; }
   .card__heading-span {
-    padding: 1rem 1.5rem; }
+    padding: 1rem 1.5rem;
+    border-radius: 7px; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(228, 96, 40, 0.9), rgba(210, 106, 247, 0.9)); }
     .card__heading-span--2 {
       background-image: linear-gradient(to right bottom, rgba(223, 230, 73, 0.9), rgba(0, 79, 161, 0.9)); }
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(219, 215, 58, 0.9), rgba(230, 41, 108, 0.9)); }
+  .card__details {
+    padding: 3rem;
+    color: #777777; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 1.1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #777777; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price--only {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 2rem; }
+  .card__price--value {
+    font-size: 6rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 2rem; }
 
 .comp {
   position: relative; }
