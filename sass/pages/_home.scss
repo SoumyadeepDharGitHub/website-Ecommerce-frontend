@@ -1,6 +1,6 @@
 .about-us
 {
-    background-color: $color-light-blue-grey;
+    background-color: $color-light-blue-grey;//setting background color
     padding: 25rem 0;
     margin-top: -20vh;
 }
@@ -14,7 +14,7 @@
         rgba($color-blue-gradient,0.8)),
         url(../Images/backgroundimage2-crop.jpg);
         background-size: cover;
-        height: 90vh;
+        height: 70vh;
         clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
         margin-top: -15vh;
 }
@@ -22,7 +22,13 @@
 .section-item
 {
     background-color: $color-light-blue-grey;
-    padding: 25rem 0 50rem 0;
+    padding: 25rem 0 15rem 0;
     margin-top: -15vh;
+
 }
 
+.section-reviews
+{
+    padding: 15rem 0;
+    background-color: $color-light-blue-grey;
+}

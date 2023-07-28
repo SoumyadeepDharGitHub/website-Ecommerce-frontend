@@ -1,0 +1,23 @@
+.review
+{
+    width: 75%;//setting width of review box
+    margin: 0 auto;//used to center a box element inside another box element
+    box-shadow: 0 5rem 6rem rgba($color-dark-grey,0.4);//creating shadow and opacity level for the review box element
+    border-radius: 1rem;//rounding edges of the review box
+    padding: 7rem;//setting padding to make the text and element more systematic
+    font-size: 1.7rem;//setting font size for text inside div
+    padding: 10rem;
+
+    &__shape
+    {
+        width: 15rem;//initially setting the customer picture as a box element hence giving a width
+        height: 15rem;//initially setting the customer picture as a box element hence giving a height
+        float: left;//making the customer picture float in the div
+        background-color: orange;
+        shape-outside: circle(50% at 50% 50%);//setting 
+        -webkit-shape-outside:circle(50% at 50% 50%);//for other browser support
+        clip-path: circle(50% at 50% 50%);//clipping it to make it appear as a circle
+        -webkit-clip-path: circle(50% at 50% 50%);//for other browser support
+        transform: translateX(-3rem);//since using float on the picture its better to transform to make the text float around while creating space from picture
+    }
+}

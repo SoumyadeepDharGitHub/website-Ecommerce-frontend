@@ -124,6 +124,9 @@ body {
 .utility-bottom-margin-2rem {
   margin-bottom: 2rem; }
 
+.utility-bottom-margin-2-and-half-rem {
+  margin-bottom: 2.5rem; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -325,6 +328,25 @@ body {
   .feature-box:hover {
     transform: translateY(1.5rem) scale(1.05); }
 
+.review {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 5rem 6rem rgba(119, 119, 119, 0.4);
+  border-radius: 1rem;
+  padding: 7rem;
+  font-size: 1.7rem;
+  padding: 10rem; }
+  .review__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: orange;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -382,11 +404,15 @@ body {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(236, 237, 100, 0.8), rgba(19, 212, 235, 0.8)), url(../Images/backgroundimage2-crop.jpg);
   background-size: cover;
-  height: 90vh;
+  height: 70vh;
   clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
   margin-top: -15vh; }
 
 .section-item {
   background-color: #dde6ed;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -15vh; }
+
+.section-reviews {
+  padding: 15rem 0;
+  background-color: #dde6ed; }
