@@ -371,7 +371,7 @@ body {
   padding: 6rem;
   transform: skewX(4deg);
   background-color: white;
-  opacity: 95%; }
+  opacity: 80%; }
   .review > * {
     transform: skewX(-4deg); }
   .review__shape {
@@ -391,7 +391,8 @@ body {
     backface-visibility: hidden;
     transition: all 0.5s; }
   .review__text {
-    transform: skewX(-4deg); }
+    transform: skewX(-4deg);
+    color: black; }
   .review__caption {
     position: absolute;
     top: 50%;

@@ -9,7 +9,7 @@
     padding: 6rem;
     transform: skewX(4deg);//give the review box a slight tilted effect
     background-color: $color-white;
-    opacity: 95%;
+    opacity: 80%;
 
     &>*//all child selectors skewed opposite direction to keep picture and text unchanged
     {
@@ -36,11 +36,13 @@
         scale: 1.1;
         backface-visibility: hidden;
         transition: all 0.5s;
+        
     }
     
     &__text
     {
         transform: skewX(-4deg);
+        color: $color-black;
     }
 
     &__caption
