@@ -7,17 +7,32 @@
     padding: 7rem;//setting padding to make the text and element more systematic
     font-size: 1.7rem;//setting font size for text inside div
     padding: 10rem;
+    transform: skewX(4deg);//give the review box a slight tilted effect
+
+    &>*//all child selectors skewed opposite direction to keep picture and text unchanged
+    {
+        transform: skewX(-4deg);
+    }
 
     &__shape
     {
         width: 15rem;//initially setting the customer picture as a box element hence giving a width
         height: 15rem;//initially setting the customer picture as a box element hence giving a height
         float: left;//making the customer picture float in the div
-        background-color: orange;
         shape-outside: circle(50% at 50% 50%);//setting 
         -webkit-shape-outside:circle(50% at 50% 50%);//for other browser support
         clip-path: circle(50% at 50% 50%);//clipping it to make it appear as a circle
         -webkit-clip-path: circle(50% at 50% 50%);//for other browser support
-        transform: translateX(-3rem);//since using float on the picture its better to transform to make the text float around while creating space from picture
+        transform: translateX(-3rem) skewX(-4deg);//since using float on the picture its better to transform to make the text float around while creating space from picture
+    }
+
+    &__image
+    {
+        height: 100%;
+    }
+    
+    &__text
+    {
+        //section added just in case if scaled in future
     }
 }
