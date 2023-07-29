@@ -115,6 +115,9 @@ body {
   .para:not(:last-child) {
     margin-bottom: 3rem; }
 
+#form-text {
+  text-shadow: 0 2rem 7rem white; }
+
 .utility-text-center {
   text-align: center; }
 
@@ -361,6 +364,22 @@ body {
   .feature-box:hover {
     transform: translateY(1.5rem) scale(1.05); }
 
+.form__group {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-family: inherit; }
+
+.form__input:focus {
+  box-shadow: 0 3rem 3rem rgba(119, 119, 119, 0.7);
+  outline: none;
+  border-bottom: 3px solid #f69627; }
+
 .review {
   width: 75%;
   margin: 0 auto;
@@ -482,3 +501,17 @@ body {
 .section-reviews {
   padding: 15rem 0;
   position: relative; }
+
+.section-join {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #f69627, #a8eb12); }
+
+.join {
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../Images/join-pic.jpg);
+  background-size: cover;
+  border-radius: 1.4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  height: 50rem; }
+  .join__form {
+    width: 50%;
+    padding: 6rem; }

@@ -32,3 +32,29 @@
     padding: 15rem 0;
     position: relative;
 }
+
+.section-join
+{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-orange-gradient, $color-green-yellow-gradient);
+}
+
+.join
+{
+    background-image: 
+                        linear-gradient(110deg,
+                        rgba($color-white,0.7) 0%,
+                        rgba($color-white,0.7) 50%,
+                        transparent 50%),
+                        url(../Images/join-pic.jpg);
+    background-size: cover;
+    border-radius: 1.4rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+    height: 50rem;
+
+    &__form
+    {
+        width: 50%;
+        padding: 6rem;
+    }
+}
