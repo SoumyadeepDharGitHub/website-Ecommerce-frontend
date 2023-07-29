@@ -1,0 +1,19 @@
+.bg-video
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -20;
+    
+    background-color: $color-white;
+    opacity: 70%;
+
+    &__content
+    {
+        height: 100%;//resizing the bg video in the page
+        width: 100%;
+        object-fit: cover;//fits the video html element and also image
+    }
+}

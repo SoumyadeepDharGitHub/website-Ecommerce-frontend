@@ -6,8 +6,10 @@
     border-radius: 1rem;//rounding edges of the review box
     padding: 7rem;//setting padding to make the text and element more systematic
     font-size: 1.7rem;//setting font size for text inside div
-    padding: 10rem;
+    padding: 6rem;
     transform: skewX(4deg);//give the review box a slight tilted effect
+    background-color: $color-white;
+    opacity: 95%;
 
     &>*//all child selectors skewed opposite direction to keep picture and text unchanged
     {
@@ -24,15 +26,48 @@
         clip-path: circle(50% at 50% 50%);//clipping it to make it appear as a circle
         -webkit-clip-path: circle(50% at 50% 50%);//for other browser support
         transform: translateX(-3rem) skewX(-4deg);//since using float on the picture its better to transform to make the text float around while creating space from picture
+        position: relative;
     }
 
     &__image
     {
         height: 100%;
+        transform: translateX(-4rem); 
+        scale: 1.1;
+        backface-visibility: hidden;
+        transition: all 0.5s;
     }
     
     &__text
     {
-        //section added just in case if scaled in future
+        transform: skewX(-4deg);
+    }
+
+    &__caption
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption
+    {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    &:hover &__image
+    {
+        transform: translateX(-4rem); 
+        scale: 1.0;
+        filter: blur(7px) brightness(90%); 
+
     }
 }

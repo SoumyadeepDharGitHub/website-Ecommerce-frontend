@@ -127,6 +127,20 @@ body {
 .utility-bottom-margin-2-and-half-rem {
   margin-bottom: 2.5rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -20;
+  background-color: white;
+  opacity: 70%; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -190,6 +204,25 @@ body {
   transform: translateY(-5px); }
 
 .button-learnmore:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  transform: translateY(0px); }
+
+.button-learnmore__white:link, .button-learnmore__white:visited {
+  font-size: 1.8rem;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px white;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.button-learnmore__white:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px); }
+
+.button-learnmore__white:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   transform: translateY(0px); }
 
@@ -335,8 +368,10 @@ body {
   border-radius: 1rem;
   padding: 7rem;
   font-size: 1.7rem;
-  padding: 10rem;
-  transform: skewX(4deg); }
+  padding: 6rem;
+  transform: skewX(4deg);
+  background-color: white;
+  opacity: 95%; }
   .review > * {
     transform: skewX(-4deg); }
   .review__shape {
@@ -347,9 +382,35 @@ body {
     -webkit-shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(-4deg); }
+    transform: translateX(-3rem) skewX(-4deg);
+    position: relative; }
   .review__image {
-    height: 100%; }
+    height: 100%;
+    transform: translateX(-4rem);
+    scale: 1.1;
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  .review__text {
+    transform: skewX(-4deg); }
+  .review__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .review:hover .review__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .review:hover .review__image {
+    transform: translateX(-4rem);
+    scale: 1.0;
+    filter: blur(7px) brightness(90%); }
 
 .row {
   max-width: 114rem;
@@ -419,4 +480,4 @@ body {
 
 .section-reviews {
   padding: 15rem 0;
-  background-color: #dde6ed; }
+  position: relative; }
