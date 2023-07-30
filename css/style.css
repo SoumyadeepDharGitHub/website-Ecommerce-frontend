@@ -119,7 +119,7 @@ body {
   text-shadow: 0 2rem 7rem white; }
 
 .utility-text-center {
-  text-align: center; }
+  text-align: center !important; }
 
 .utility-bottom-margin-8rem {
   margin-bottom: 8rem; }
@@ -144,7 +144,7 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.button:link, .button:visited {
+.button, .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -191,14 +191,16 @@ body {
   .button--white::after {
     background-color: white; }
 
-.button-learnmore:link, .button-learnmore:visited {
+.button-learnmore, .button-learnmore:link, .button-learnmore:visited {
   font-size: 1.8rem;
   color: #004d7a;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px #004d7a;
   padding: 3px;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer; }
 
 .button-learnmore:hover {
   background-color: #004d7a;
@@ -228,6 +230,12 @@ body {
 .button-learnmore__white:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   transform: translateY(0px); }
+
+#form-but {
+  margin-top: 3.5rem;
+  border-color: transparent;
+  color: black;
+  font-weight: 400; }
 
 .card {
   perspective: 150rem;
@@ -365,7 +373,8 @@ body {
     transform: translateY(1.5rem) scale(1.05); }
 
 .form__group {
-  margin-bottom: 2rem; }
+  margin-bottom: 0rem;
+  color: black; }
 
 .form__input {
   font-size: 1.5rem;
@@ -373,12 +382,71 @@ body {
   border-radius: 7px;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
-  font-family: inherit; }
+  font-family: inherit;
+  width: 90%;
+  display: block;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s; }
+  .form__input:focus {
+    box-shadow: 0 3rem 3rem rgba(119, 119, 119, 0.7);
+    outline: none;
+    border-bottom: 3px solid #a8eb12;
+    transition: all 0.1s; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #e6296c; }
 
-.form__input:focus {
-  box-shadow: 0 3rem 3rem rgba(119, 119, 119, 0.7);
-  outline: none;
-  border-bottom: 3px solid #f69627; }
+.form__label {
+  font-size: 1.3rem;
+  font-family: "Lato";
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.2s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  padding: 5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 7px solid #00bf72;
+  border-radius: 1.4rem;
+  display: inline-block;
+  position: absolute;
+  left: -0.3rem;
+  top: 4.3rem; }
+  .form__radio-button::after {
+    content: "";
+    height: 1.3rem;
+    width: 1.3rem;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -36%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #00bf72;
+    opacity: 0;
+    transition: opacity 0.2; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
 
 .review {
   width: 75%;
@@ -504,10 +572,10 @@ body {
 
 .section-join {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #f69627, #a8eb12); }
+  background-image: linear-gradient(to right bottom, #eff668, #eea43a); }
 
 .join {
-  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../Images/join-pic.jpg);
+  background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../Images/join-pic.jpg);
   background-size: cover;
   border-radius: 1.4rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
