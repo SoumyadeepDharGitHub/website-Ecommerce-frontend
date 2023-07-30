@@ -115,6 +115,11 @@ body {
   .para:not(:last-child) {
     margin-bottom: 3rem; }
 
+.footer-para {
+  color: white;
+  font-weight: 400;
+  font-size: 2.1rem; }
+
 #form-text {
   text-shadow: 0 2rem 7rem white; }
 
@@ -499,6 +504,34 @@ body {
     transform: translateX(-4rem);
     scale: 1.0;
     filter: blur(7px) brightness(90%); }
+
+.footer {
+  background: #63dee8;
+  background: radial-gradient(circle, #63dee8 0%, #d419c6 100%);
+  padding: 14rem 0;
+  font-size: 2rem; }
+  .footer__logoBox {
+    text-align: center; }
+  .footer__logo {
+    width: 18rem;
+    margin-bottom: 7rem; }
+  .footer__list {
+    list-style: none; }
+  .footer__items {
+    display: inline-block;
+    margin-right: 0.7rem; }
+  .footer__links {
+    transition: all 0.3s; }
+    .footer__links:link, .footer__links:visited {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block; }
+    .footer__links:active, .footer__links:hover {
+      color: black;
+      box-shadow: 0 1rem 2rem rgba(246, 150, 39, 0.7);
+      transform: skewY(-7deg) skewX(-14deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.2); }
 
 .row {
   max-width: 114rem;
